@@ -1,9 +1,9 @@
 import useSWR from 'swr';
 
-function useWhitelist () {
+function useStake () {
 	// @ts-ignore
 	const fetcher = (...args) => fetch(...args).then(res => res.json());
-	const { data, error, isLoading } = useSWR(`/api/whitelist`, fetcher);
+	const { data, error, isLoading } = useSWR(`/api/stake`, fetcher);
 	return {
 		data,
 		isLoading,
@@ -11,4 +11,4 @@ function useWhitelist () {
 	}
 }
 
-export default useWhitelist;
+export default useStake;
