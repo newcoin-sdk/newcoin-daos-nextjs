@@ -4,6 +4,8 @@
 
 body {
     @apply bg-primary text-secondary;
+    width: 90%;
+    margin: 100px auto 0;
 }
 
 a {
@@ -14,6 +16,6 @@ p {
     @apply text-secondary;
 }
 
-.ant-btn {
-    @apply bg-primary text-secondary flex flex-row items-center justify-center p-5 rounded-lg;
+button {
+    @apply font-bold border border-solid rounded-lg cursor-pointer flex flex-row items-center justify-center
 }
