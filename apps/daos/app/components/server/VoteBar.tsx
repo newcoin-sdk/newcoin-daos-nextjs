@@ -1,11 +1,12 @@
 import { ProgressBar } from "../client/ProgressBar";
+import { getLocalTimeData } from "@/app/utils";
 import Paragraph2b from "@/app/components/server/Paragraph2b";
+import { StandardProposal } from "@/app/components/server/Proposals/Lists/StandardList";
 
-// @ts-ignore
-export default function VoteBar ({ proposal }) {
-	const yesVotes = Number(proposal?.vote_yes?.quantity?.split(/ /)[0]);
-	const noVotes = Number(proposal?.vote_no?.quantity?.split(/ /)[0]);
-	const timeData = proposal?.time_data;
+export default function VoteBar ( proposal : StandardProposal ) {
+	const yesVotes = Number(proposal.vote_yes?.quantity?.split(/ /)[0]);
+	const noVotes = Number(proposal.vote_no?.quantity?.split(/ /)[0]);
+	const timeData = getLocalTimeData(proposal);
 	return (
 		<div className={"flex flex-col w-11/12"}>
 			<div className={"flex flex-row justify-between mb-2"}>

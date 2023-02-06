@@ -1,10 +1,11 @@
 import StandardList from "@/app/components/server/Proposals/Lists/StandardList";
 
-export default async function DaoDetails() {
+// @ts-ignore
+export default async function DaoDetails({ params }) {
 	return (
 		<div>
 			 {/*@ts-expect-error Server Component */}
-			<StandardList />
+			<StandardList {...params} />
 		</div>
 	)
 }

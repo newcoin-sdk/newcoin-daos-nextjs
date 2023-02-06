@@ -16,7 +16,7 @@ export default function StandardRow ( proposal: StandardProposal ) {
 					<CustomButton>View</CustomButton>
 				</div>
 				<div className={"flex-row items-center justify-between"}>
-					<VoteBar proposal={proposal} />
+					<VoteBar {...proposal} />
 					<AviLink />
 				</div>
 			</Link>
