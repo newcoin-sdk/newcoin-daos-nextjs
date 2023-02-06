@@ -17,7 +17,7 @@ export default function StandardRow ( proposal: StandardProposal ) {
 				</div>
 				<div className={"flex-row items-center justify-between"}>
 					<VoteBar proposal={proposal} />
-					<AviLink userObj={""} />
+					<AviLink />
 				</div>
 			</Link>
 		</div>
