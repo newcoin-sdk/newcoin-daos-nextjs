@@ -5,13 +5,12 @@ import pic from "../../../public/pic.png";
 //@ts-ignore
 export default function AviLink () {
 	return (
-			<div className={"flex flex-row justify-end items-center mt-10"}>
+			<div className={"flex flex-row items-center justify-end mt-10"}>
 				<Image
-					className={"rounded-full mr-5"}
+					className={"rounded-full mr-5 w-12 h-12"}
 					src={pic}
 					alt={"avatar"}
-					width={80}
-					height={100}
+					priority={true}
 				/>
 				<Header3>{"test user"}</Header3>
 			</div>
