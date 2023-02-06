@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-primary text-secondary;
+}
+
+a {
+    @apply no-underline text-secondary
+}
+
+p {
+    @apply text-secondary;
+}
+
+.ant-btn {
+    @apply bg-primary text-secondary flex flex-row items-center justify-center p-5 rounded-lg;
+}
