@@ -1,7 +1,7 @@
-import { AviLinkLarge } from "@/app/components/server/AviLink";
 import {CustomButton, PowerUpBtn} from "@/app/components/client/buttons/Buttons";
 import Link from "next/link";
 import StandardList from "@/app/components/server/Proposals/Lists/StandardList";
+import AviLinkLarge from "@/app/components/server/AviLinkLarge";
 
 export type VoteObject = {
 	quantity: string;
@@ -21,7 +21,7 @@ export type StandardProposal = {
 	url: string;
 }
 
-const baseUrl = 'http://localhost:3001/api';
+const baseUrl = 'http://localhost:3000/api';
 
 async function getProposals( daoOwner: string, type: string ) {
 	const res = await fetch(`${ baseUrl }/${ daoOwner }/${ type }`);
@@ -51,21 +51,21 @@ export default async function DaoDetails({ params }) {
 		<div className={"flex flex-col"}>
 			<div className={"flex flex-row justify-between items-center"}>
 				<AviLinkLarge>
-					<p> { params.daoOwner } DAO</p>
+					<h1 className={"text-4xl"}>{params.daoOwner} DAO</h1>
 					<p className={"font-light text-2xl"}>testing dao functionality</p>
 					<p className={"font-light text-sm"}>3157 $DXDXIO Staked</p>
 				</AviLinkLarge>
 				<PowerUpBtn>New Proposal</PowerUpBtn>
 			</div>
 			<div className={"flex flex-row items-center p-10 pl-20"}>
-				<DaoMenuLink label={"Members"} path={"/members"} />
-				<DaoMenuLink label={"Proposals"} path={"/standard"} />
-				<CountTab count={ 2 } type={"Active"} />
-				<CountTab count={ 5 } type={"Expired"} />
-				<CountTab count={ 8 } type={"Approved"} />
+				<DaoMenuLink label={"Members"} path={"/members"}/>
+				<DaoMenuLink label={"Proposals"} path={"/standard"}/>
+				<CountTab count={2} type={"Active"}/>
+				<CountTab count={5} type={"Expired"}/>
+				<CountTab count={8} type={"Approved"}/>
 				<CustomButton>Get $DXDXIO</CustomButton>
 			</div>
-			<StandardList proposals={ standardProposals.rows }/>
+			<StandardList proposals={standardProposals.rows}/>
 		</div>
-	)
+	);
 }

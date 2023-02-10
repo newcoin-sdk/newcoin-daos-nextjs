@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { StandardProposal } from "@/app/components/server/Proposals/Lists/StandardList";
 import { CustomButton } from "@/app/components/client/buttons/Buttons";
 import VoteBar from "@/app/components/server/VoteBar";
-import { AviLinkSmall } from "@/app/components/server/AviLink";
+import AviLink from "@/app/components/server/AviLink";
 
-export default function StandardRow ( proposal: StandardProposal ) {
+//@ts-ignore
+export default function StandardRow  ({ proposal }) {
 	return (
 		<div className="w-full p-10 pl-20 mb-20 rounded-lg hover:bg-hover">
 			<Link href={""} >
@@ -17,7 +17,7 @@ export default function StandardRow ( proposal: StandardProposal ) {
 				</div>
 				<div className={"flex flex-row items-center justify-between mb-5"}>
 					<VoteBar {...proposal} />
-					<AviLinkSmall />
+					<AviLink />
 				</div>
 			</Link>
 		</div>

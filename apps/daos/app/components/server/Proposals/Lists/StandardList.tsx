@@ -6,7 +6,7 @@ export default function StandardList({ proposals }) {
 	return (
 		<div className={"flex flex-col items-end justify-center"}>
 			{ proposals.map(( row: StandardProposal ) =>
-				<StandardRow key={row.id} {...row} />
+				<StandardRow proposal={row} key={row.id}  />
 			)}
 		</div>
 	);
