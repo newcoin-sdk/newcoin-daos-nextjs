@@ -12,7 +12,8 @@ export default function AviLink () {
 					alt={"avatar"}
 					priority={true}
 				/>
-				<Header3>{"test user"}</Header3>
+				{ // TODO: Make this render children instead }
+				<Header3>{"test user"}</Header3>}
 			</div>
 	);
 }

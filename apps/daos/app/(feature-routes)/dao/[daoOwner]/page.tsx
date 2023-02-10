@@ -58,8 +58,8 @@ export default async function DaoDetails({ params }) {
 				<PowerUpBtn>New Proposal</PowerUpBtn>
 			</div>
 			<div className={"flex flex-row items-center p-10 pl-20"}>
-				<DaoMenuLink label={"Members"} path={"/members"}/>
-				<DaoMenuLink label={"Proposals"} path={"/standard"}/>
+				<DaoMenuLink label={"Members"} path={"dx.io/members"}/>
+				<DaoMenuLink label={"Proposals"} path={"dx.io/standard"}/>
 				<CountTab count={2} type={"Active"}/>
 				<CountTab count={5} type={"Expired"}/>
 				<CountTab count={8} type={"Approved"}/>
