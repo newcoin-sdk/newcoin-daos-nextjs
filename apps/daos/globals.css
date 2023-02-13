@@ -1,21 +1,32 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-primary text-secondary;
-    width: 90%;
-    margin: 100px auto 0;
+
+@layer base {
+    body {
+        @apply w-[90%] bg-primary ;
+        @apply m-auto;
+        @apply text-base text-secondary;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    p {
+        @apply text-secondary text-base
+    }
+
+    button {
+        @apply no-underline font-bold border border-solid rounded-lg cursor-pointer flex flex-row items-center justify-center
+    }
 }
 
-a {
-    @apply no-underline text-secondary
+@layer components {
+    .btn {
+        @apply no-underline font-bold border border-solid rounded-lg cursor-pointer flex flex-row items-center justify-center
+    }
 }
 
-p {
-    @apply text-secondary;
-}
-
-button {
-    @apply font-bold border border-solid rounded-lg cursor-pointer flex flex-row items-center justify-center
-}

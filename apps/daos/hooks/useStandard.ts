@@ -3,7 +3,7 @@ import useSWR from 'swr';
 function useStandard () {
 	// @ts-ignore
 	const fetcher = (...args) => fetch(...args).then(res => res.json());
-	const { data, error, isLoading } = useSWR(`/api/standard`, fetcher);
+	const { data, error, isLoading } = useSWR(`/api/dx.io/standard`, fetcher);
 	return {
 		data,
 		isLoading,
