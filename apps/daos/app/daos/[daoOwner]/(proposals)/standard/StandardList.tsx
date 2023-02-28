@@ -1,5 +1,30 @@
 import StandardRow from "@/app/daos/[daoOwner]/(proposals)/standard/StandardRow";
-import {getProposals, StandardProposal} from "@/app/daos/[daoOwner]/(proposals)/standard/page";
+
+export type VoteObject = {
+	quantity: string;
+	contract: string;
+};
+
+export type StandardProposal = {
+	id: number;
+	title: string;
+	summary: string;
+	proposer: string;
+	vote_start: Date;
+	vote_end: Date;
+	vote_yes: VoteObject;
+	vote_no: VoteObject;
+	pass_rate: number;
+	url: string;
+}
+
+
+export async function getStandardProposals( daoOwner: string) {
+	const baseUrl = 'http://localhost:3000/api';
+	const res = await fetch(`${ baseUrl }/${ daoOwner }/standard`);
+	if(!res.ok) throw new Error("Failed to fetch standard (proposals)");
+	return res.json();
+}
 
 //@ts-ignore
 function CountTab({ count, type }) {
@@ -13,7 +38,7 @@ function CountTab({ count, type }) {
 
 // @ts-ignore
 export default async function StandardList({ daoOwner }) {
-	const standardProposals = await getProposals( daoOwner, "standard" );
+	const standardProposals = await getStandardProposals( daoOwner );
 	return (
 		<div>
 			<div className={"flex flex-row items-center justify-end mt-20 mb-5"}>
@@ -23,7 +48,7 @@ export default async function StandardList({ daoOwner }) {
 				<CountTab count={5} type={"Expired"}/>
 			</div>
 			<div className={"flex flex-col items-end justify-center"}>
-				{ standardProposals.rows.map(( row: StandardProposal ) =>
+				{ standardProposals.map(( row: StandardProposal ) =>
 					<StandardRow proposal={row} key={row.id}  />
 				)}
 			</div>
