@@ -3,15 +3,34 @@ import VoteBar from "@/common/VoteBar";
 import Image from "next/image";
 import pic from "@/public/pic.png";
 
+/*
+
+
+        {
+          status: 'created',
+          pass_rate: 5,
+          votes_counter: 0,
+        },
+
+
+ */
+
 //@ts-ignore
-export default function StandardRow  ({ proposal }) {
+export default function RemoveMemberRow  ({ proposal }) {
 	const base = "/daos/" + "dx.io/";
 	return (
-		<Link href={ base + proposal.id } className="w-full p-10 pl-20 mb-20 rounded-lg hover:bg-hover mt-5">
+		<Link href={ base + "/" + proposal.user } className="w-full p-10 pl-20 mb-20 rounded-lg hover:bg-hover mt-5">
 			<div className={"flex flex-row justify-between items-center mb-10"}>
 				<div className={"flex flex-row items-center"}>
 					<p className={"text-xl font-bold"}>#{ proposal.id }</p>
-					<p className={"text-4xl ml-5 truncate pb-1"}>{proposal.title}</p>
+					<p className={"text-4xl ml-5 truncate pb-1"}>remove</p>
+					<Image
+						className={"rounded-full w-12 h-12 ml-5"}
+						src={pic}
+						alt={"avatar"}
+						priority={true}
+					/>
+					<p className={"text-4xl ml-5 truncate pb-1"}>{proposal.user}</p>
 				</div>
 				<div className={"border border-1 rounded-lg p-5"}>
 					<p className={"text-sm"}>status: { proposal.status }</p>

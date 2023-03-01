@@ -1,3 +1,5 @@
+import MemberRow from "@/app/daos/[daoOwner]/(proposals)/members/MemberRow";
+
 export async function getDaoMembers( daoOwner: string ) {
 	const baseUrl = 'http://localhost:3000/api';
 	const res = await fetch(`${ baseUrl }/${ daoOwner }/members`);
@@ -10,7 +12,7 @@ export default async function MemberList() {
 	return (
 		<div>
 			{ proposals.map(( row: any ) =>
-				<p key={row.id}>{row.user} {row.type}</p>
+				<MemberRow key={ row.id } proposal={row} />
 			)}
 		</div>
 	);

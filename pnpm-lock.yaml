@@ -20,6 +20,7 @@ importers:
       eslint: 8.33.0
       eslint-config-next: 13.1.6
       moment: ^2.29.4
+      newcoin-ts-api: ^0.9.2
       next: 13.1.6
       postcss: ^8.4.21
       react: 18.2.0
@@ -37,6 +38,7 @@ importers:
       eslint: 8.33.0
       eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
       moment: 2.29.4
+      newcoin-ts-api: 0.9.2
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -2152,6 +2154,22 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    dev: false
+
+  /newcoin-ts-api/0.9.2:
+    resolution: {integrity: sha512-60pzAMLQNPl7bCfdUes6gAnt0W7fudWtEtC0+lzEy/lDot30LYTrfG/OWVaRSco1nA7YGwsgsxVRFoieSV18dw==}
+    dependencies:
+      '@eoscafe/hyperion': 3.3.2
+      '@newfound8ion/newcoin.daos-js': 2.1.2
+      '@newfound8ion/newcoin.pool-js': 1.0.8
+      '@newfound8ion/newcoin.pools-js': 2.0.4
+      atomicassets: 1.5.1
+      cross-fetch: 3.1.5
+      eosjs: 22.1.0
+      eosjs-ecc-priveos: 4.0.8
+      moment: 2.29.4
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /next/13.1.6_biqbaboplfbrettd7655fr4n2y:

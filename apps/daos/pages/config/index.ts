@@ -1,4 +1,4 @@
-import { NCO_BlockchainAPI } from "@newfound8ion/newcoin-sdk";
+import { NCO_BlockchainAPI } from "newcoin-ts-api";
 
 export const newcoin = new NCO_BlockchainAPI({
 	debug: false,

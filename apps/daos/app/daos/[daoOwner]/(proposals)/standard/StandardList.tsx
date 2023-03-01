@@ -18,7 +18,6 @@ export type StandardProposal = {
 	url: string;
 }
 
-
 export async function getStandardProposals( daoOwner: string) {
 	const baseUrl = 'http://localhost:3000/api';
 	const res = await fetch(`${ baseUrl }/${ daoOwner }/standard`);
@@ -27,7 +26,7 @@ export async function getStandardProposals( daoOwner: string) {
 }
 
 //@ts-ignore
-function CountTab({ count, type }) {
+export function CountTab({ count, type }) {
 	return (
 		<p className={`text-2xl ml-20 opacity-50 cursor-pointer text-lg`}>{ type }
 			<span className={"text-sm bg-gray-200 rounded-full px-3 py-1 ml-5 opacity text-primary font-[800] text-center "}> { count }

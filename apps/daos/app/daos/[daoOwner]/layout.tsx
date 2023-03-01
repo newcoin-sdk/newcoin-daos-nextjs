@@ -29,13 +29,13 @@ export default async function DaoLayout ({ params, children }) {
 				</div>
 				<PowerUpBtn link={ base + "/create"}>New Proposal</PowerUpBtn>
 			</div>
-			<div className={"flex flex-row items-center justify-between w-[50%] mt-20"}>
+			<div className={"flex flex-row items-center justify-between mt-20"}>
 				<StakeBtn link={ base + "/create/standard"} >Get DXDXIO</StakeBtn>
-				<WrappedLink to={ base + "/members"}>Members</WrappedLink>
 				<WrappedLink to={ base + "/standard"}>Standard</WrappedLink>
 				<WrappedLink to={ base + "/stake"}>Stake</WrappedLink>
-				<WrappedLink to={ base + "/stake"}>Inflate</WrappedLink>
-				<WrappedLink to={ base + "/stake"}>Deflate</WrappedLink>
+				<WrappedLink to={ base + "/addMember"}>Add Member</WrappedLink>
+				<WrappedLink to={ base + "/removeMember"}>Remove Member</WrappedLink>
+				<WrappedLink to={ base + "/members"}>Members</WrappedLink>
 			</div>
 			{ children }
 		</body>
