@@ -3,18 +3,6 @@ import VoteBar from "@/common/VoteBar";
 import Image from "next/image";
 import pic from "@/public/pic.png";
 
-/*
-
-
-        {
-          status: 'created',
-          pass_rate: 5,
-          votes_counter: 0,
-        },
-
-
- */
-
 //@ts-ignore
 export default function RemoveMemberRow  ({ proposal }) {
 	const base = "/daos/" + "dx.io/";
