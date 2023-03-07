@@ -1,4 +1,4 @@
-import AddMemberRow from "@/app/[daoOwner]/(proposals)/addMember/AddMemberRow";
+import AddMemberRow from "@/app/[daoOwner]/(proposals)/(members)/addMember/AddMemberRow";
 
 export default async function AddMemberProposalsList() {
 	const res = await fetch('http://localhost:3000/daos/dx.io/addMember/api');

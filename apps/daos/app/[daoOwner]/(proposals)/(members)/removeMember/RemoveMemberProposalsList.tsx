@@ -1,4 +1,4 @@
-import RemoveMemberRow from "@/app/[daoOwner]/(proposals)/removeMember/RemoveMemberRow";
+import RemoveMemberRow from "@/app/[daoOwner]/(proposals)/(members)/removeMember/RemoveMemberRow";
 
 //@ts-ignore
 export function CountTab({ count, type }) {

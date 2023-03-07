@@ -1,6 +1,6 @@
 import { ProgressBar } from "./ProgressBar";
-import { getLocalTimeData } from "@/utils";
-import Paragraph2r from "@/components/Paragraph2r";
+import { getLocalTimeData } from "@/common/utils";
+import Paragraph2r from "@/common/components/Paragraph2r";
 
 export default function VoteBar ( proposal : any ) {
 	const yesVotes = Number(proposal.vote_yes?.quantity?.split(/ /)[0]);

@@ -1,4 +1,4 @@
-import RemoveMemberProposalsList from "@/app/[daoOwner]/(proposals)/removeMember/RemoveMemberProposalsList";
+import AddMemberProposalsList from "@/app/[daoOwner]/(proposals)/(members)/addMember/AddMemberProposalsList";
 
 // @ts-ignore
 export default function DaoDetails({ params }) {
@@ -6,7 +6,7 @@ export default function DaoDetails({ params }) {
 	return (
 		<div className={"flex flex-col"}>
 			{/* @ts-expect-error Server Component */}
-			<RemoveMemberProposalsList daoOwner={ daoOwner } />
+			<AddMemberProposalsList daoOwner={ daoOwner } />
 		</div>
 	);
 }

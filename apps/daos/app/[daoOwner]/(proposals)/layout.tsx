@@ -1,6 +1,6 @@
 import "@/globals.css"
-import { PowerUpBtn, StakeBtn } from "@/app/common/Buttons";
-import WrappedLink from "@/components/WrappedLink";
+import { PowerUpBtn, StakeBtn } from "@/common/Buttons";
+import WrappedLink from "@/common/components/WrappedLink";
 import Image from "next/image";
 import pic from "@/public/pic.png";
 

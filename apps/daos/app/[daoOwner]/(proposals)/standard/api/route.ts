@@ -1,4 +1,4 @@
-import {newcoin} from "@/app/common/config";
+import {newcoin} from "@/common/config";
 import {NextResponse} from "next/server";
 
 export async function GET() {

@@ -1,14 +1,12 @@
-import "@/globals.css"
-
-
 // @ts-ignore
-export default function DaoLayout ({ children }) {
+export default function RootLayout ({ params, children }) {
+	const base =  params.daoOwner;
 	return (
 		<html lang="en">
-		<head ><title></title></head>
-		<body>
-			{ children }
-		</body>
+			<head ><title></title></head>
+			<body>
+				{ children }
+			</body>
 		</html>
 	)
 }
