@@ -1,9 +1,8 @@
 import { ProgressBar } from "./ProgressBar";
 import { getLocalTimeData } from "@/utils";
 import Paragraph2r from "@/components/Paragraph2r";
-import {StandardProposal} from "@/app/daos/[daoOwner]/(proposals)/standard/page";
 
-export default function VoteBar ( proposal : StandardProposal ) {
+export default function VoteBar ( proposal : any ) {
 	const yesVotes = Number(proposal.vote_yes?.quantity?.split(/ /)[0]);
 	const noVotes = Number(proposal.vote_no?.quantity?.split(/ /)[0]);
 	const timeData = getLocalTimeData(proposal);
