@@ -1,4 +1,4 @@
-import { StandardProposal } from "@/app/daos/[daoOwner]/(proposals)/standard/StandardList";
+import { StandardProposal } from "@/app/[daoOwner]/(proposals)/standard/StandardList";
 import moment from "moment";
 
 export const getLocalTimeData = ( proposal : StandardProposal ) => {
