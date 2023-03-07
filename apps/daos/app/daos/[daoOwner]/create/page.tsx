@@ -1,14 +1,9 @@
 "use client"
 
-// import {useState} from "react";
 import {useForm} from "antd/lib/form/Form";
 import {Button, Form} from "antd";
-import AntInput from "@/common/AntInput";
-import AntTextInput from "@/common/AntTextInput";
-import AntRadioGroup from "@/common/AntRadioBtn";
-import * as process from "process";
 
-export async function createProposals( daoOwner: string, type: string ) {
+async function createProposals( daoOwner: string, type: string ) {
 	const baseUrl = 'http://localhost:3000/api';
 	let start = new Date();
 	let end = start;
@@ -29,10 +24,7 @@ export async function createProposals( daoOwner: string, type: string ) {
 		}),
 		headers: { "Authorization": `newsafe ${prv_key}`, "Content-Type": "application/json" }
 	});
-
 }
-
-
 // @ts-ignore
 export default function Page({ }) {
 	const [form] = useForm();
@@ -44,7 +36,6 @@ export default function Page({ }) {
 		const response = await createProposals( "dx.io", "custodian" );
 
 	}
-	
 	
 	return (
 		<Form
