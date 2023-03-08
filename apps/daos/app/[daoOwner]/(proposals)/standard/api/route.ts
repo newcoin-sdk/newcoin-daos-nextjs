@@ -1,13 +1,32 @@
 import {newcoin} from "@/common/config";
 import {NextResponse} from "next/server";
 
-export async function GET() {
-	const mocked = {
-		dao_id: "0",
-		limit: 100,
-		reverse: true,
-	};
-	const response = await newcoin.daos.getDaoProposals(mocked);
-	return NextResponse.json(response.rows);
+export type ProposalGetRequest = {
+	dao_owner: string;
+	limit?: number;
+	reverse?: boolean;
+};
+
+export async function GET( input: ProposalGetRequest ) {
+	const response = await newcoin.daos.getDaoProposals( input );
+	return NextResponse.json( response.rows );
+}
+
+export type StandardProposalParams = {
+	title: string,
+	summary: string,
+	url: string,
+	pass_rate: number,
+	proposer: string,
+	dao_owner: string,
+	vote_start: string,
+	vote_end: string,
+	proposer_prv_key: string,
+}
+
+export async function POST( input: any ) {
+	const response = await newcoin.daos.getDaoProposals( input );
+	console.log( response );
+	return response;
 }
 
