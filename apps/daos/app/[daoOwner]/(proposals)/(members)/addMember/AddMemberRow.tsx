@@ -1,5 +1,5 @@
 import Link from "next/link";
-import VoteBar from "@/common/VoteBar";
+import VoteBar from "@/common/components/daos/VoteBar";
 import Image from "next/image";
 import pic from "@/public/pic.png";
 

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 // we will create these in the next step
 import { getHostnameDataBySubdomain, getSubdomainPaths } from "@/lib/db";
 
-// Our types for the site data
+// Our extendable-types for the site data
 export interface Props {
 	name: String
 	description: String

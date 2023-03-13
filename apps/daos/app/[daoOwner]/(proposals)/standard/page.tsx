@@ -1,5 +1,5 @@
-import StandardList from "@/app/[daoOwner]/(proposals)/standard/StandardList";
 
+import StandardList from "@/app/[daoOwner]/(proposals)/standard/StandardList";
 // @ts-ignore
 export default function DaoDetails({ params }) {
 	const daoOwner = params.daoOwner;

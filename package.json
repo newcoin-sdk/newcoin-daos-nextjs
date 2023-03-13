@@ -2,6 +2,13 @@
   "name": "newcoin-daos-nextjs",
   "version": "1.0.0",
   "keywords": [],
+  "scripts": {
+    "daos": "cd apps/daos && pnpm dev",
+    "builder": "cd libraries/builder-daos && pnpm dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "devDependencies": {
     "turbo": "^1.7.3"
   }

@@ -1,7 +1,7 @@
-// import { StandardProposal } from "../../.
+import { StandardProposal } from "@/../../../../libraries/builder-daos/components/daos/proposals/StandardList";
 import moment from "moment";
 
-export const getLocalTimeData = ( proposal : any ) => {
+export const getLocalTimeData = ( proposal : StandardProposal ) => {
 	const mockVoteStart = moment().format("YYYY-MM-DD HH:mm:ss");
 	const mockVoteEnd = moment().format("YYYY-MM-DD HH:mm:ss");
 	const voteStart = proposal.vote_start || mockVoteStart;

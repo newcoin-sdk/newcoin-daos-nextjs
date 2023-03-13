@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header3 from "@/common/components/Header3";
-import pic from "../public/pic.png";
+import pic from "../../../public/pic.png";
 
 //@ts-ignore
 export default function AviLink () {

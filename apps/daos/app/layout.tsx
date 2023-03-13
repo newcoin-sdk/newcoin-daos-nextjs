@@ -1,3 +1,4 @@
+import '@/globals.css'
 // @ts-ignore
 export default function RootLayout ({ params, children }) {
 	const base =  params.daoOwner;

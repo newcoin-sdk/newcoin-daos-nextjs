@@ -1,0 +1,1 @@
+export const Header2 = "text-2xl font-bold";

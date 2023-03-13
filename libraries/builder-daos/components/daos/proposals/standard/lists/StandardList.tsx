@@ -1,4 +1,4 @@
-import StandardRow from "./StandardRow";
+import StandardRow from "@/components/daos/proposals/standard/previews/StandardRow";
 
 export type VoteObject = {
 	quantity: string;
